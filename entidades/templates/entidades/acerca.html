@@ -1,0 +1,29 @@
+{% extends "entidades/index.html" %}
+
+
+
+{% block titulo %}
+<h1>class = > Acerca</h1>    
+{% endblock titulo %}
+
+
+{% block contenido %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>nombre</th>
+            <th>empresa</th>
+        </tr> 
+    </thead>
+    <tbody>
+    {% for c in Acerca  %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c. nombre }}</td>
+            <td>{{ c. empresa }}</td>
+        </tr>
+    {% endfor %}    
+    </tbody>
+</table> 
+{% endblock contenido %}   
